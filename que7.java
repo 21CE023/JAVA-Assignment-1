@@ -1,3 +1,23 @@
+// Display numbers in a pyramid pattern.  
+
+ 
+
+// 1  
+
+// 1 2 1  
+
+// 1 2 4 2 1  
+
+// 1 2 4 8 4 2 1  
+
+// 1 2 4 8 16 8 4 2 1  
+
+// 1 2 4 8 16 32 16 8 4 2 1  
+
+// 1 2 4 8 16 32 64 32 16 8 4 2 1 
+
+// 1 2 4 8 16 32 64 128 64 32 16 8 4 2 1  
+
 import java.util.*;
 public class que7 {
     private static final String string = " ";
