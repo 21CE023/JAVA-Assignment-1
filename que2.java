@@ -4,7 +4,7 @@
 
 import java.util.Scanner;
 
-public class Assignment_1 {
+public class que2{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String a = sc.nextLine();
@@ -15,7 +15,6 @@ public class Assignment_1 {
                 System.out.println("o");
             } else if (ch[i] == 'z') {
                 System.out.println("z");
-                javax.crypto
             }
         }
     }
