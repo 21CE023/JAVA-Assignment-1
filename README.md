@@ -1,2 +1,2 @@
-# JAVA Assignment-1
+# JAVA
  
