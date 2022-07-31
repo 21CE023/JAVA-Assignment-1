@@ -20,7 +20,7 @@ public class que2{
         // String str = "example";
         char[] ch = a.toCharArray();                //To convert String from array
         for (int i = 0; i < 2; i++) {               //To check first two character
-            if (ch[i] == 'o') {                     
+            if (ch[i] == 'o') {
                 System.out.println("o");
             } else if (ch[i] == 'z') {
                 System.out.println("z");
