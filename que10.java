@@ -1,49 +1,25 @@
-import java.util.Scanner;
- 
-public class que10
-{
-    public static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
- 
-    public static String encrypt(String plainText, int shiftKey)
-    {
-        plainText = plainText.toLowerCase();
-        String cipherText = "";
-        for (int i = 0; i < plainText.length(); i++)
-        {
-            int charPosition = ALPHABET.indexOf(plainText.charAt(i));
-            int keyVal = (shiftKey + charPosition) % 26;
-            char replaceVal = ALPHABET.charAt(keyVal);
-            cipherText += replaceVal;
-        }
-        return cipherText;
-    }
- 
-    public static String decrypt(String cipherText, int shiftKey)
-    {
-        cipherText = cipherText.toLowerCase();
-        String plainText = "";
-        for (int i = 0; i < cipherText.length(); i++)
-        {
-            int charPosition = ALPHABET.indexOf(cipherText.charAt(i));
-            int keyVal = (charPosition - shiftKey) % 26;
-            if (keyVal < 0)
-            {
-                keyVal = ALPHABET.length() + keyVal;
+// A Java Program to illustrate Caesar Cipher Technique
+class CaesarCipher {
+    // Encrypts text
+    // using a
+    // shift od s
+    public static StringBuffer encrypt(String text, int s) {
+        StringBuffer result = new StringBuffer();
+        for (int i = 0; i < text.length(); i++) {
+            if (Character.isUpperCase(text.charAt(i))) {
+                char ch = (char) (((int) text.charAt(i) + s - 65) % 26 + 65);
+                result.append(ch);
+            } else {
+                char ch = (char) (((int) text.charAt(i) + s - 97) % 26 +
+                        97);
+                result.append(ch);
             }
-            char replaceVal = ALPHABET.charAt(keyVal);
-            plainText += replaceVal;
         }
-        return plainText;
-    }
- 
-    public static void main(String[] args)
-    {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the String for Encryption: ");
-        String message = new String();
-        message = sc.next();
-        System.out.println(encrypt(message, 3));
-        System.out.println(decrypt(encrypt(message, 3), 3));
-        sc.close();
-    }
+        return result;
+    }// Driver codepublic 
+    static void main(String[] args){
+        String text = "ATTACKATONCE";int s =4;
+        System.out.println("Text : " + text);
+ System.out.println("Shift : " + s);
+System.out.println("Cipher: " + encrypt(text, s));}
 }
