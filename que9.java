@@ -1,21 +1,27 @@
+import java.util.Scanner;
 
-
-import java.util.*;
 public class que9 {
     public static void main(String[] args) {
-        Scanner obj = new Scanner(System.in);
-        final int r = 9;
-        final int c = 9;
-        int arr[][]= new int[r][c];
+        Scanner sc = new Scanner(System.in);
+        int[][] a = new int[9][9];
+        int f, ans = 0;
 
-        for (int i = 0; i < r; i++) 
-        {
-            for (int j = 0; j < c; j++) 
-            {
-                arr[i][j] = obj.nextInt(); 
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                a[i][j] = sc.nextInt();
             }
         }
 
-        obj.close();
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                ans = ans ^ a[i][j];
+            }
+        }
+
+        if (ans == 1)
+            System.out.println("YES");
+        else
+            System.out.println("NO");
+
     }
 }

@@ -9,22 +9,23 @@
 
 // startOz("oxx") → "o" 
 
-
-
 import java.util.Scanner;
 
-public class que2{
+public class que2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String a = sc.nextLine();
-        // String str = "example";
-        char[] ch = a.toCharArray();                //To convert String from array
-        for (int i = 0; i < 2; i++) {               //To check first two character
-            if (ch[i] == 'o') {
-                System.out.println("o");
-            } else if (ch[i] == 'z') {
-                System.out.println("z");
-            }
+        System.out.println("Enter String:");
+        String A = sc.nextLine();
+        startOZ(A);
+    }
+
+    static void startOZ(String a) {
+        if (a.charAt(0) == 'O' || a.charAt(0) == 'o') {
+            System.out.print(a.charAt(0));
+        }
+        if (a.charAt(1) == 'z' || a.charAt(1) == 'Z') {
+            System.out.print(a.charAt(1));
         }
     }
+
 }
